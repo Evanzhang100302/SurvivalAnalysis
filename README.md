@@ -33,8 +33,6 @@ All models are evaluated using:
 - `simu33RfSurv.py`: Random Survival Forest on Simu33
 - `simulations33.py`: Simulation utilities for Simu33
 
-- `rsf_sim_result.csv`, `cindex_result_nn20_seed_1.csv`, etc.: Output evaluation results.
-
 ## Future Work
 
 If time allows, we may incorporate:
