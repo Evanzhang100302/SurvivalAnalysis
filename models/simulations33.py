@@ -305,7 +305,6 @@ def run_simulation(max_niter, n, n_obs, dis_threshold, nsim, seed):
 
 # In[ ]:
 if __name__ == "__main__":
-    # 参数设置
     max_niter = 50
     n = 1200
     n_obs = 1000
@@ -313,7 +312,6 @@ if __name__ == "__main__":
     nsim = 5
     seed = 1
 
-    # 执行函数
     run_simulation(max_niter, n, n_obs, dis_threshold, nsim, seed)
 
 

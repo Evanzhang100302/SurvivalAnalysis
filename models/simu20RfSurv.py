@@ -67,16 +67,12 @@ def run_rsf_simulation(n, n_obs, nsim, seed):
 
         surv_preds = rsf.predict_survival_function(X_test, return_array=True)
         # Use expected survival time (area under curve) as predicted risk
-        # 获取所有 survival functions（每个样本对应一个 function 对象）
+        
         sf_list = rsf.predict_survival_function(X_test)
-
-# 所有样本的时间点是相同的，取第一个样本的时间向量
         times = sf_list[0].x
 
-# 构建二维矩阵：每行是一个样本的 survival probability 曲线
         surv_preds = np.vstack([sf.y for sf in sf_list])
 
-# 计算每个样本的期望生存时间（AUC）
         expected_time = np.sum(surv_preds * np.diff(np.insert(times, 0, 0)), axis=1)
 
 
